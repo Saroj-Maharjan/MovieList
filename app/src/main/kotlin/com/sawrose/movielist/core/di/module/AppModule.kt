@@ -3,6 +3,7 @@ package com.sawrose.movielist.core.di.module
 import android.content.Context
 import com.sawrose.movielist.BuildConfig
 import com.sawrose.movielist.MovieApp
+import com.sawrose.movielist.features.movies.MoviesRepository
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -39,5 +40,7 @@ class AppModule(private val application: MovieApp) {
         return okHttpClientBuilder.build()
     }
 
-//    @Provides @Singleton fun provideMoviesRepository(dataSource: MoviesRepository.Network): MoviesRepository = dataSource
+    @Provides
+    @Singleton
+    fun provideMoviesRepository(dataSource: MoviesRepository.Network): MoviesRepository = dataSource
 }

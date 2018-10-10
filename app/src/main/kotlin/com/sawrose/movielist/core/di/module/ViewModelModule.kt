@@ -1,18 +1,22 @@
 package com.sawrose.movielist.core.di.module
 
+import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
+import com.sawrose.movielist.features.movies.MoviesViewModel
+import com.sawrose.weshop.di.module.ViewModelKey
 import dagger.Binds
 import dagger.Module
+import dagger.multibindings.IntoMap
 
 @Suppress("unused")
 @Module
 abstract class ViewModelModule {
 
-//    @Binds
-//    @IntoMap
-//    @ViewModelKey(SplashViewModel::class)
-//    abstract fun bindSplashViewModel(splashViewModel: SplashViewModel): ViewModel
-//
+    @Binds
+    @IntoMap
+    @ViewModelKey(MoviesViewModel::class)
+    abstract fun bindSplashViewModel(moviesViewModel: MoviesViewModel): ViewModel
+
 //    @Binds
 //    @IntoMap
 //    @ViewModelKey(LoginViewModel::class)

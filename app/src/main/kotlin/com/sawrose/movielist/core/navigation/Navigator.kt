@@ -1,6 +1,7 @@
 package com.sawrose.movielist.core.navigation
 
 import android.content.Context
+import android.view.View
 import com.sawrose.movielist.features.login.Authenticator
 import com.sawrose.movielist.features.login.LoginActivity
 import com.sawrose.movielist.features.movies.MoviesActivity
@@ -59,5 +60,5 @@ class Navigator @Inject constructor(
 //        return intent
 //    }
 //
-//    class Extras(val transitionSharedElement: View)
+class Extras(val transitionSharedElement: View)
 }
