@@ -53,7 +53,7 @@ class MoviesFragment : BaseFragment() {
         movieList.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
         movieList.adapter = moviesAdapter
         moviesAdapter.clickListener = { movie, navigationExtras ->
-            //            navigator.showMain()
+            navigator.showMovieDetails(activity!!, movie, navigationExtras)
         }
     }
 
@@ -84,5 +84,3 @@ class MoviesFragment : BaseFragment() {
         notifyWithAction(message, R.string.action_refresh, ::loadMovieList)
     }
 }
-
-
